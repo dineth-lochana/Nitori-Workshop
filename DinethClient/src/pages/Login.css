@@ -1,0 +1,64 @@
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: white; /* Ensure text is visible */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+}
+
+.login-page {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url('/public/1837a82bf4c00603234a03af89f3c2b4.jpg'); /* More transparent gradient with background image */
+  background-size: cover; /* Ensure background image covers the entire container */
+  background-attachment: fixed;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter background */
+  border: none;
+  padding: 15px 20px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 60%;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.form-control:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add slight glow effect on hover */
+}
+
+.login-accept-button {
+  color: white !important;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-image: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); /* Add gradient background */
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+  display: block;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+}
+
+.login-accept-button:hover {
+  background-color: rgba(0, 123, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add slight glow effect on hover */
+}
+

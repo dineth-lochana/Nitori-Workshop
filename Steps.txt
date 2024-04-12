@@ -1,0 +1,159 @@
+1. Install IntelliJ Idea CE
+2. Install MySQL and MySQL Workbench
+3. Create Spring app with MySQL, SpringWeb, Spring Data, and Lombad Dependencies.
+4. Open given project in IntelliJ
+
+5. Create DB in Workbench
+  PS user-root pw-root
+
+6. Edit application.properties in J project and add the connection code.
+7. Create User entity
+8. Create User repository -> Now we have the following methods.
+	save(S entity)
+	findById(ID id)
+	findAll()
+	delete(S entity)
+	deleteById(ID id)
+	count()
+	existsById(ID id)
+
+9. Create Insert / Create API.
+{
+    "item_name" : "Mouse",
+    "item_type" : "Mouse",
+    "submitted_by" : "Dineth",
+    "date" : {{$timestamp}},
+    "item_status" :"",
+    "item_image1" : "",
+    "item_image2" : "",
+    "item_image3" : ""
+}
+This is the JSON format for insert data.
+
+10. Implement Get Method.
+http://localhost:8080/api/computer_item/1
+Will get first item with ID 1.
+
+11. Implement Get All Method.
+http://localhost:8080/api/computer_item
+Will return a JSON of all Items.
+
+----
+Side Quest - Listen IntelliJ is too much for my PC to handle.
+So I'm manually compiling with Maven.
+1. Download Maven.
+2. Add Maven to path by right clicking system and properties and adding variables. 
+First Add to System Variables
+ex  MAVEN_HOME -> C:\Users\IK\Desktop\SLIITA\PPA Personal\apache-maven-3.9.6
+Then to Path
+Path -> %MAVEN_HOME%\bin 
+Done
+3. run 'mvn --version' in command line to verify if project is running.
+4. Created a run cmd here bat here in project directory.
+5. Open it and run 'mvn clean package' to build package.
+
+6... Downloaded Maven Files are 'C:\Users\YourUsername\.m2\repository' so we have to download them manually if we use a new PC.
+
+5. After everything has been run. Run 'mvn clean install -Dmaven.test.skip=true
+' to build the jar.
+or eve 'mvn package -Dmaven.test.skip=true'.
+6. Created jar is in target directory.
+7. 'java -jar your-application.jar' to run the jar file and CTRL+C to shutdown.
+
+----
+
+Snap back to reality.
+
+
+11. Implemented some API for users. http://localhost:8080/api/users
+This is to POST and GET ALL
+{
+    "useremail" : "lochandineth@outlook.com",
+    "user_name" : "Dineth Mallawarachchi",
+    "user_password" : "dineth123",
+    "user_type":"Admin",
+    "user_verified": "True"
+}
+
+12. Get user by ID also works:
+GET http://localhost:8080/api/users/1
+
+13. Update
+ex: PUT to http://localhost:8080/api/users/1
+{
+    "useremail" : "lochandineth@outlook.com",
+    "user_name" : "Dineth Mallawarachchi",
+    "user_password" : "dineth123",
+    "user_type":"Admin",
+    "user_verified": "True"
+}
+
+14. Delete
+ex: DELETE to http://localhost:8080/api/users/3
+
+15. CRUD for Users and PC Items Work.
+
+16. Added way to find user by email. (for login)
+http://localhost:8080/api/users/email/lochandineth@nekosoft.com
+will give a user
+
+(Had to change user_email to useremail because spring threw a fit and refused to do anything with finding by user_email)
+
+17. Added CORS to the springboot app.
+
+
+18. Added Messages
+
+http://localhost:8080/api/messages - get
+
+{
+    "submittedby" : "takanomii@nekosoft.com",
+    "date" : "",
+    "msgtext" : "Hello 3!",
+    "message_status": "",
+    "message_image": "https://www.baka-tsuki.org/project/images/1/1c/Gekkou.jpg"
+}
+
+- post
+
+http://localhost:8080/api/messages/email/takanomii@nekosoft.com - find by email
+
+19. Added new pc parts for the new pc build function >__<
+We'll see how it goes.
+FYI Its insert JSON is like this in postman.
+
+{
+    "newPcPartName": "Low Latency Speaker",
+    "newPcPartPrice": 5000,
+    "newPcPartStatus": "Available",
+    "newPcPartType": "Speaker"
+}
+
+I forgot about the stupid camel case rule in lombok.
+
+
+
+20. Created PC Orders backend functions.
+url is http://localhost:8080/api/pc_orders
+This is the JSON which I tested in Postman.
+
+{
+  "order_case": "Example Case",
+  "order_mouse": "Example Mouse",
+  "order_speaker": "Example Speaker",
+  "order_keyboard": "Example Keyboard",
+  "order_monitor": "Example Monitor",
+  "order_cpu": "Example CPU",
+  "order_gpu": "Example GPU",
+  "order_motherboard": "Example Motherboard",
+  "order_ram": "Example RAM",
+  "order_psu": "Example PSU",
+  "order_storage": "Example Storage",
+  "order_nic": "Example NIC",
+  "order_input": "Example Input",
+  "order_webcam": "Example Webcam",
+  "order_user": "Cats Cat", 
+  "order_status": "Accepted" 
+}
+
+ 

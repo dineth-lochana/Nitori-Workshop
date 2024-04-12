@@ -1,0 +1,154 @@
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.repair_welcome {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 35px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url('/public/1837a82bf4c00603234a03af89f3c2b4.jpg'); /* More transparent gradient with background image */
+    background-size: cover; /* Ensure background image covers the entire container */
+    background-attachment: fixed;
+
+}
+
+
+.container_header_text {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 40px;
+    justifyContent : 'center' !important;
+
+}
+
+
+.schedule-add-button {
+  color: white !important;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-image: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); /* Add gradient background */
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+  display: block;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+  text-decoration: none !important; /* Remove underline */
+  outline: none !important; /* Remove outline when focused */
+}
+
+.schedule-add-button:hover {
+  background-color: rgba(0, 123, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add slight glow effect on hover */
+}
+
+
+.schedule-add-button-sec {
+  color: white !important;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px 10px;
+  margin-top: 20px;;
+  background-image: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); /* Add gradient background */
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+  display: block;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+  text-decoration: none !important; /* Remove underline */
+  outline: none !important; /* Remove outline when focused */
+}
+
+.schedule-add-button-sec:hover {
+  background-color: rgba(0, 123, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add slight glow effect on hover */
+}
+
+.status_text {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 25px;
+    justifyContent : 'center' !important;
+
+}
+
+
+.custom-table {
+  background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  border-spacing: 0; /* Ensure no spacing between cells */
+  --bs-table-bg: transparent !important; 
+
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Border style */
+  padding: 12px; /* Padding for cell content */
+  text-align: center; /* Center-align text */
+
+}
+
+.custom-table th {
+  background-color: #f0f0f0; /* Light gray background for table headers */
+  color: #333; /* Dark text color for table headers */
+  font-weight: bold; /* Bold text */
+
+}
+
+
+.item-name-column {
+  width: min-content !important;
+}
+
+
+.homepage-subcard {
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Ensure the image doesn't overflow the card */
+    width: 100%; /* Ensure the card takes up its container's width */
+    height: auto; /* Allow the card's height to adjust based on the image's aspect ratio */
+}
+
+.homepage-subcard img {
+    display: block; /* Ensure the image is treated as a block element */
+    max-width: 10rem; /* Ensure the image doesn't exceed the card's width */
+    height: auto; /* Allow the image's height to adjust based on its width */
+}
+
+
+@media (max-width: 991.98px) {
+
+.schedule-add-button-sec {
+  font-size: 20px;
+}
+
+}

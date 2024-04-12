@@ -1,0 +1,120 @@
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.repair_welcome {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 35px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url('/public/1837a82bf4c00603234a03af89f3c2b4.jpg'); /* More transparent gradient with background image */
+    background-size: cover; /* Ensure background image covers the entire container */
+    background-attachment: fixed;
+
+}
+
+
+.container_header_text {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 40px;
+    justifyContent : 'center' !important;
+
+}
+
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter background */
+  border: none;
+  padding: 15px 20px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 60%;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.form-control:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add slight glow effect on hover */
+}
+
+.login-accept-button {
+  color: white !important;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-image: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); /* Add gradient background */
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+  display: block;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+}
+
+.form-label {
+    text-align: center !important;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 5px; /* Adjust margin as needed */
+    margin-top: 20px;
+    margin-left: 2%;
+}
+
+
+.schedule-add-button {
+  color: white !important;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-image: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); /* Add gradient background */
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+  display: block;
+  margin: auto;
+  border-radius: 10px; /* Add border-radius to buttons */
+  text-decoration: none !important; /* Remove underline */
+  outline: none !important; /* Remove outline when focused */
+}
+
+.schedule-add-button:hover {
+  background-color: rgba(0, 123, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add slight glow effect on hover */
+}
+
+.status_text {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 25px;
+    justifyContent : 'center' !important;
+
+}

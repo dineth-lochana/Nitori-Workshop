@@ -1,0 +1,89 @@
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.ribbon-navbar {
+    /* background: linear-gradient(to right, rgba(74, 134, 217, 0.5), rgba(242, 121, 194, 0.5));*/
+    /* background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(255, 215, 0, 0.8)); */
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); 
+
+ /* Semi-transparent blue to gold gradient */
+    padding: 10px 0;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+.navbar-toggler {
+    background-color: transparent !important; /* Set background color to transparent */
+    border: none !important; /* Remove border */
+    color: white !important; /* Set text color to white */
+    font-size: 24px; /* Set font size */
+    font-family: 'Roboto', sans-serif; /* Set font family */
+    margin-right: 10px; /* Adjust margin */
+    padding: 10px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: color 1s ease; /* Add transition effect */
+    border: 0.5px solid white !important;
+    border-radius: 0px; 
+
+}
+
+.navbar-toggler:hover {
+    color: #ffffff !important; /* Change text color on hover */
+}
+
+
+.ribbon-brand {
+    color: white !important;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0px; /* Add rounded corners */
+    padding: 0px 0px; /* Add padding */
+    margin: 0 4px; /* Adjust margins */
+    border: 2px solid transparent; /* Add border */
+    transition: border-color 0.3s ease, color 0.3s ease; /* Add transition */
+}
+
+.ribbon-brand:focus {
+    border-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white border when focused */
+    outline: none; /* Remove default focus outline */
+}
+
+.login-button {
+    color: white !important;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px; /* Add padding */
+    margin: 10px 10px 10px; /* Adjust margins to add bottom margin */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background by default */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    border: 1px solid white; /* Add white border */
+    textDecoration: 'none'!important; 
+    border-radius: 10px; /* Add border-radius to buttons */
+
+}
+
+.login-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background on hover */
+    color: #ffffff !important; /* White text color on hover */
+    textDecoration: 'none';
+
+}
+
+
+
+
+@media (max-width: 991.98px) {
+    .navbar-collapse .nav-link {
+        margin-bottom: 5px; /* Add bottom margin to the nav links */
+    }
+}
+
+@media (max-width: 991.98px) {
+   .navbar-collapse {
+          flex-direction: column;
+        text-align: center;
+    }
+
+}

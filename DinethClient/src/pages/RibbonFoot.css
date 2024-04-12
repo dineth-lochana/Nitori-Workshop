@@ -1,0 +1,68 @@
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.ribbon-footer {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8)); 
+    color: white;
+    padding: 20px 0;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+
+
+}
+
+.footer-text {
+    color: white;
+    font-size: 24px; /* Increase font size */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Allow the links to grow and fill available space */
+}
+
+.footer-link {
+    color: white !important;
+    margin: 5px;
+    font-size: 20px; /* Increase font size for links */
+    padding: 10px 20px; /* Add padding to buttons */
+    border-radius: 0px; /* Add border-radius to buttons */
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    border: 1px solid white; /* Add white border */
+    border-radius: 10px; /* Add border-radius to buttons */
+
+}
+
+.footer-link:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background on hover */
+    color: #ffffff !important; /* White text color on hover */
+}
+
+@media (max-width: 767.98px) {
+    .footer-text {
+        display: block; /* Show the footer text */
+        text-align: center; /* Center the text */
+        margin-bottom: 10px; /* Add space between text and buttons */
+    }
+
+    .footer-links {
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center the links horizontally */
+        flex-wrap: wrap; /* Allow wrapping of links */
+    }
+
+    .footer-link {
+        margin: 5px; /* Add margin to the links */
+    }
+
+    .ribbon-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+}
