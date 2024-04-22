@@ -39,6 +39,18 @@ body {
 
 }
 
+.container_text2 {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.9), rgba(60, 179, 113, 0.8));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; /* Adjust the font weight as needed */
+    font-size: 25px;
+
+}
+
 .container-content-home {
     display: flex;
     justify-content: center;
@@ -73,6 +85,14 @@ body {
 .sub-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.sub-cards-grid2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
@@ -113,4 +133,12 @@ body {
   }
 
 
+}
+
+
+@media screen and (max-width: 768px) {
+  .sub-cards-grid2  {
+    display: flex !important;
+    flex-direction: column !important; /* Arrange sub-cards vertically */
+  }
 }

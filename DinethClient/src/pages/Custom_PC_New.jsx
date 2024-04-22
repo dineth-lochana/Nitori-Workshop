@@ -27,11 +27,14 @@ const Custom_PC_New = () => {
   const [error, setError] = useState("");
   const [pcParts, setPcParts] = useState({});
 
+  const [pcPartsData, setPcPartsData] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0); 
+
   useEffect(() => {
-    // Fetch PC parts data from your backend API
     Axios.get("http://localhost:8080/api/new_pc_item")
       .then(response => {
-        // Group PC parts by type
+        setPcPartsData(response.data);
+        console.table(pcPartsData)
         const groupedParts = {};
         response.data.forEach(part => {
           if (!groupedParts[part.newPcPartType]) {
@@ -39,18 +42,31 @@ const Custom_PC_New = () => {
           }
           groupedParts[part.newPcPartType].push(part);
         });
-        setPcParts(groupedParts);
+        setPcParts(groupedParts); 
       })
       .catch(error => {
         console.error("Error fetching PC parts:", error);
       });
   }, []);
 
+  useEffect(() => {
+    let totalPrice = 0;
+    Object.keys(formData).forEach(key => {
+      const selectedPart = pcPartsData.find(part => part.newPcPartName === formData[key]);
+      if (selectedPart && !isNaN(selectedPart.newPcPartPrice)) {
+        totalPrice += parseFloat(selectedPart.newPcPartPrice);
+      }
+    });
+    setTotalPrice(totalPrice);
+  }, [formData, pcPartsData]);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+
   };
 
   const handleSubmit = async (e) => {
@@ -107,6 +123,7 @@ const Custom_PC_New = () => {
         <br/>  
         <h1 align="center" className="repair_welcome justify-content-center align-items-center">New Repair.</h1>
         <Card.Text className="container_text">Ordering a new PC~</Card.Text>
+
         {/* Add your SVG here */}
         <Card.Body>
           <Link to="/Custom_PC">
@@ -124,6 +141,9 @@ const Custom_PC_New = () => {
       <Card style={{ width: '100%' }} className="homepage-subcard">
         <br/>  
         <h1 align="center" className="repair_welcome justify-content-center align-items-center">Order for a new PC.</h1>
+        
+        <Card.Text className="container_text">Total Price: {totalPrice}</Card.Text>
+
         <Card.Text className="container_text"></Card.Text>
         <Card.Body>
           <form onSubmit={handleSubmit} className="custom-form">
@@ -159,7 +179,7 @@ const Custom_PC_New = () => {
         <br/>
         <Row className="justify-content-center">
           {renderNewRepairCard()}
-          {renderForm()}
+          {pcParts && Object.keys(pcParts).length > 0 && renderForm()}
         </Row>
       </Container>
       <br/>

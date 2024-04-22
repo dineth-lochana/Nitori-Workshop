@@ -39,6 +39,11 @@ const Schedule_new_repairs = () => {
 
 
     try {
+
+      if (!formData.item_image1) {
+        formData.item_image1 = "https://placehold.co/600x400.png";
+      }
+
       const dataToSend = {
         ...formData,
         submitted_by: global.config.i18n.user.useremail,
@@ -128,7 +133,7 @@ const Schedule_new_repairs = () => {
 
             <Form.Group>
               <Form.Label className="form-label">Item Image 1:</Form.Label>
-              <Form.Control type="text" name="item_image1" value={formData.item_image1} onChange={handleChange} required />
+              <Form.Control type="text" name="item_image1" value={formData.item_image1} onChange={handleChange} />
             </Form.Group>
 
             <Form.Group>

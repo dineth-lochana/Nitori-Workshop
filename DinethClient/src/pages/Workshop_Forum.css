@@ -145,6 +145,14 @@ body {
 }
 
 
+.row-centered {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+
+
 @media (max-width: 991.98px) {
 
 .schedule-add-button-sec {

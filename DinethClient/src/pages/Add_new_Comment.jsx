@@ -32,6 +32,7 @@ const NewComment = () => {
     });
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -41,20 +42,24 @@ const NewComment = () => {
     }
 
     try {
+      let messageImage = formData.message_image; 
+      if (!formData.message_image) {
+        messageImage = "https://placehold.co/600x400.png";
+      }
+
       const dataToSend = {
         ...formData,
         submittedby: global.config.i18n.user.useremail,
         date: new Date().toISOString(),
-        message_status: "Not Verified"
-
+        message_status: "Not Verified",
+        message_image: messageImage, 
       };
 
       await Axios.post("http://localhost:8080/api/messages", dataToSend);
 
-
       setFormData({
-      message_image: "",
-      msgtext: ""
+        message_image: "",
+        msgtext: ""
       });
 
       setError("");
@@ -63,6 +68,8 @@ const NewComment = () => {
       setError("Error adding Message. Please try again later.");
     }
   };
+
+
 
   const isValidEmail = (email) => {
     const regex = /^\w+@[a-zA-Z_.]+\.[a-zA-Z]+$/;
@@ -126,7 +133,7 @@ const NewComment = () => {
 
             <Form.Group>
               <Form.Label className="form-label">Message Image:</Form.Label>
-              <Form.Control type="text" name="message_image" value={formData.message_image} onChange={handleChange} required />
+              <Form.Control type="text" name="message_image" value={formData.message_image} onChange={handleChange} />
             </Form.Group>
 
             <Form.Group>
