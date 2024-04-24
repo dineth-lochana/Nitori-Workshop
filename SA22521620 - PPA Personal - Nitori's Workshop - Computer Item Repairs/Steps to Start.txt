@@ -1,0 +1,10 @@
+1. npx create-react-app dinethclient to create App.
+
+2. Install axios, react-router, bootstrap, react-router-dom
+
+3. 'npm start' to start sever.
+
+4. Made the React App as usual, actual steps are in the files.
+
+5. npm install -g serve
+   serve -s build

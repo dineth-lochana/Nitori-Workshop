@@ -1,0 +1,18 @@
+I didn't have enough system resources to run Intellij Idea,
+so I wrote the code in VSCode and compiled it manually.
+
+If there is a need to run the server the same way I did.
+
+1. Extract the server files in the folder.
+
+2. CD or open a terminal in that folder, (the server files with the SERVER.jar)
+and run this command.
+
+3. "java -jar server.jar" -> This will run the server.
+
+(Please have the DB running, or spring won't work!)
+
+For the client APP.
+You can run with 'npm start'
+
+Thank you!

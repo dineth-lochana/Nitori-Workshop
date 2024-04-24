@@ -19,10 +19,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url('/public/1837a82bf4c00603234a03af89f3c2b4.jpg'); /* More transparent gradient with background image */
-    background-size: cover; /* Ensure background image covers the entire container */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), linear-gradient(120deg, #a1c4fd, #c2e9fb);
+    background-size: 100% 100%; /* Ensure background image covers the entire container */
     background-attachment: fixed;
-
+        background-attachment: fixed;
+background-repeat: repeat !important;
 }
 
 
