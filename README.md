@@ -1,5 +1,4 @@
 # Nitori Workshop~!
-For the Project which uses React | Node | SQL, and which I developed as the Project Manager, also check -> https://github.com/dineth-lochana/GreenTech.LK-Group-13
 
 Nitori's Workshop! A Management Focused Site ( React | Spring Boot | MySQL )
  
